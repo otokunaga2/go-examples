@@ -1,2 +1,3 @@
 create database testdb;
-CREATE table employee(id integer, office_id integer);
+\connect testdb;
+CREATE table public.employee(id integer, office_id integer);

@@ -1,5 +1,5 @@
-* example code <- Concurrency Go Techniques Developers
+# example code <- Concurrency Go Techniques Developers
 
 
-* Reference
-- [[Concurrency-Go-Techiniques:https://www.amazon.co.jp/Concurrency-Go-Techniques-Developers-English-ebook/dp/B0742NH2SG]]
+## Reference
+[Concurrency-Go-Techiniques](https://www.amazon.co.jp/dp/B0742NH2SG)

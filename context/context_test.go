@@ -6,7 +6,6 @@ import (
 	"testing"
 	"time"
 	"context"
-	"fmt"
 )
 
 type StubStore struct {

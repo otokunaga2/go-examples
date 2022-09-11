@@ -13,7 +13,7 @@ func TestGETPlayers(t *testing.T) {
 
 		PlayerServer(response, request)
 
-		got := response.Body.Stirng()
+		got := response.Body.String()
 		want := "20"
 
 		if got != want {

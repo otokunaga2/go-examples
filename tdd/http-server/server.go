@@ -9,19 +9,19 @@ import (
 func ListenAndServe(addr string, handler Handler) error {
 	return nil
 }
-func PlayerServer(w http.ResponseWriter, r *http.Request) {
+func (p *PlayerServer) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	player := strings.TrimPrefix(r.URL.Path, "/players/")
-
-	if player == "Pepper" {
-		fmt.Fprint(w, "20")
-		return
-	} else if player == "Floyd" {
-		fmt.Fprint(w, "10")
-		return
-
-	}
+	fmt.Fprint(w, p.store.GetPlayerScore(player))
 }
 
 type Handler interface {
 	ServeHTTP(w http.ResponseWriter, r *http.Request)
+}
+
+type PlayerStore interface {
+	GetPlayerScore(name string) int
+}
+
+type PlayerServer struct {
+	store PlayerStore
 }
